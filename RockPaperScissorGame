@@ -1,0 +1,23 @@
+import java.util.*;
+public class rockPaperScissior {
+    public static void main(String [] args){
+        System.out.println("-------------------------------------");
+        System.out.println("HI! READY TO CHALLENGE THE COMPUTER?");
+        System.out.println("PRESS 1 FOR ROCK , PRESS 2 FOR PAPER , PRESS 3 FOR SCISSOR");
+        Scanner sc= new Scanner(System.in);
+        int n= sc.nextInt();
+        String arr[]={"ROCK","PAPER","SCISSOR"};
+        Random random=new Random();
+        int cinput=random.nextInt(3)+1;
+        if(n==cinput){
+            System.out.println("COMPUTER CHOSE:"+arr[cinput-1]);
+            System.out.println("DRAW!!");}
+        else if( n==1 && cinput==3 || n==2&&cinput==1 || n==3&&cinput==2){
+            System.out.println("COMPUTER CHOSE:"+arr[cinput-1]);
+            System.out.println("YOU WIN!");}
+        else {
+            System.out.println("COMPUTER CHOSE:"+arr[cinput-1]);
+            System.out.println("COMPUTER WINS!!");
+        }   
+    }
+}
