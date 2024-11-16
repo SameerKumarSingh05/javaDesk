@@ -1,0 +1,73 @@
+import java.util.*;
+public class conversion_Pg1 {
+    public static void main(String [] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("1 FOR DECIMAL TO BINARY");
+        System.out.println("2 FOR DECIMAL TO OCTAL");
+        System.out.println("3 FOR BINARY  TO DECIMAL");
+        System.out.println("4 FOR OCTAL TO DECIMAL");
+        int n = sc.nextInt();
+        switch (n) {
+            case 1:
+                System.out.println("enter number");
+                int a = sc.nextInt();
+                func1(a);
+                break;
+            case 2:
+                System.out.println("enter number");
+                int b = sc.nextInt();
+                func2(b);
+                break;
+            case 3:
+                System.out.println("enter number");
+                int c = sc.nextInt();
+                func3(c);
+                break;
+            case 4:
+                System.out.println("enter number");
+                int d = sc.nextInt();
+                func4(d);
+                break;
+            }}
+    public static void func1(int x){     //decimal to binary
+        String s= "";
+        while(x>0) {
+            int d = x % 2;
+            s = s + d;
+            x = x / 2;
+        }
+        for(int i=s.length()-1;i>=0;i--){
+            System.out.print(s.charAt(i));
+    }}
+        public static void func2 (int y){    //decimal to octal
+            String r= "";
+            while(y>0) {
+                int d = y % 8;
+                r = r + d;
+                y = y / 8;
+            }
+            for(int i=r.length()-1;i>=0;i--){
+                System.out.print(r.charAt(i));}
+}
+    public static void func3(int u){    //binary to decimal
+        double sum=0;
+        int i=0;
+        while(u>0){
+            int d= u%10;
+            sum=sum+d*(Math.pow(2,i));
+            u=u/10;
+            i++;
+        }
+        System.out.println(sum);
+    }
+    public static void func4(int p){    //octal to decimal
+        double sum=0;
+        int i=0;
+        while(p>0){
+            int d= p%10;
+            sum=sum+d*(Math.pow(8,i));
+            p=p/10;
+        i++;}
+        System.out.println(sum);
+    }
+}
