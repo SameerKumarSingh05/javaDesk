@@ -17,7 +17,7 @@ public class rockPaperScissior {
             System.out.println("YOU WIN!");}
         else {
             System.out.println("COMPUTER CHOSE:"+arr[cinput-1]);
-            System.out.println("COMPUTER WINS!!");
+            System.out.println("COMPUTER WINS!!!");
         }   
     }
 }
