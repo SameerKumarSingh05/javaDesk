@@ -1,0 +1,19 @@
+import java.util.*;
+public class fibrec {
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Till which term you want to print the series");
+        int N = sc.nextInt();
+        for (int i = 0; i < N; i++) {
+            System.out.print(fib(i) + " ");
+        }
+    }
+    public static int fib(int n) //recursive function
+    {
+        if (n <= 1)
+            return n;
+
+        return fib(n - 1) + fib(n - 2);
+    }
+}
