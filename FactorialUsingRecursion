@@ -1,0 +1,17 @@
+import java.util.*;
+public class facrec {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("enter the number");
+        int num = sc.nextInt();
+        long factorial = pro(num);
+        System.out.println("Factorial of " + num + " = " + factorial);
+    }
+    public static long pro(int num){
+        if (num >= 1)
+            return num * pro(num - 1);
+        else
+            return 1;
+    }
+}
+
